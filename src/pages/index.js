@@ -10,8 +10,8 @@ import {
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-
-const App = () => {
+//desestruturando o navigation para navegar entre as telas
+const App = ( {navigation} ) => {
     const data =[
         {
             id: '1',
@@ -35,11 +35,15 @@ const App = () => {
             foto: null
         }
     ]
+    
     return(
         <View style={styles.container}>
             <View style={styles.toolBox}>
                 <Text style={styles.title}>Lista de leitura</Text>
-                <TouchableOpacity style={styles.addButton}>
+                <TouchableOpacity style={styles.addButton}
+                    onPress={() => {
+                        navigation.navigate('Cadastrar')
+                    }}>
                     <Icon name='add' size={14} color='#FFF'/>
                 </TouchableOpacity>
             </View>

@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity,StyleSheet } from 'react-native
 
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-const Cadastro = () => {
+const Cadastro = ({ navigation }) => {
     return (
         <View style={styles.container}>
                 <Text  style={styles.titleText} >Inclua seu novo livro</Text>
@@ -25,7 +25,10 @@ const Cadastro = () => {
                     <Text style={styles.buttonCadastrarText}>Cadastrar</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.buttonCancel}>
+                <TouchableOpacity style={styles.buttonCancel}
+                    onPress={() => {
+                        navigation.goBack()
+                    }}>
                     <Text style={styles.buttonCancelText}>Cancelar</Text>
                 </TouchableOpacity>
 
