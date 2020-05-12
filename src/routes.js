@@ -4,7 +4,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 //importando as paginas(telas)
 import Index from './pages/'
 import Cadastrar from './pages/Cadastrar'
-
+ 
 //criando as rotas
 const Routes = createAppContainer(
     createSwitchNavigator(
